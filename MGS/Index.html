@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mandal Group of Software - MGS</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -26,34 +28,34 @@
     </nav>
   </header>
 
-  <section id="home">
-    <div class="hero">
+  <section id="home" class="hero" data-aos="fade-up">
+    <div class="hero-text">
       <h2>Welcome to MGS</h2>
       <p>Your Trusted Software Solutions Partner</p>
       <a href="#services" class="cta">Our Services</a>
     </div>
   </section>
 
-  <section id="about">
+  <section id="about" data-aos="fade-right">
     <div class="container">
       <h2>About Us</h2>
       <p>At Mandal Group of Software (MGS), we offer innovative software solutions to meet the dynamic needs of businesses. Our team of experts is dedicated to delivering quality services that enhance efficiency and productivity.</p>
     </div>
   </section>
 
-  <section id="services">
+  <section id="services" class="services" data-aos="fade-up">
     <div class="container">
       <h2>Our Services</h2>
-      <div class="services">
-        <div class="service">
+      <div class="service-list">
+        <div class="service-card">
           <h3>Software Development</h3>
           <p>Custom software solutions to streamline your business processes.</p>
         </div>
-        <div class="service">
+        <div class="service-card">
           <h3>Web Development</h3>
           <p>Responsive and user-friendly websites to engage your customers.</p>
         </div>
-        <div class="service">
+        <div class="service-card">
           <h3>Consulting</h3>
           <p>Expert advice to help you optimize your IT strategy and operations.</p>
         </div>
@@ -61,13 +63,13 @@
     </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" data-aos="fade-left">
     <div class="container">
       <h2>Contact Us</h2>
-      <form action="#">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
         <button type="submit">Send Message</button>
       </form>
     </div>
@@ -77,6 +79,13 @@
     <p>&copy; 2025 Mandal Group of Software. All rights reserved.</p>
   </footer>
 
+  <button id="scrollToTop" title="Scroll to top">&#8679;</button>
+
   <script src="script.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+    });
+  </script>
 </body>
 </html>
